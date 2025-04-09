@@ -1,6 +1,7 @@
 sudo apt update && \
 sudo apt install ffmpeg libsm6 libxext6  -y && \
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113 && \
+python -m pip install --upgrade pip setuptools wheel
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113
 pip install "monai[nibabel, tqdm, einops]==1.2.0" && \
 pip install monailabel==0.7.0 && \
 pip install timm==0.6.13 && \
